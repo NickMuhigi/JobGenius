@@ -71,4 +71,4 @@ vercel --prod
 This will push your latest changes live on Vercel.
 
 
-Thank you for being part of this journey, and happy coding! 😊
+Thank you for being part of this journey.
