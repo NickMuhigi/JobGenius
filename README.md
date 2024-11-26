@@ -33,42 +33,24 @@ This project is built using:
 - **React Query**: For efficient data fetching and caching.
 - **Vercel Postgres**: Reliable, scalable database solution.
 
-## 🔄 Deploy to Vercel
+## 📂 Clone the Repository
+- **Open your terminal**: Clone the repository from GitHub: git clone <repository-url>
+- **Navigate into the project directory**: cd JobGenius
 
-To deploy this project to Vercel, follow these steps:
+## ⚙️ Install Dependencies
+- **Make sure you have Node.js (v16+) and npm or yarn installed on your machine.**
+- **Install project dependencies**: npm install or yarn install
 
-### 1. Add Environment Variables
+## 🔑 Set Up Environment Variables
+- **Create a .env.local file in the root of the project**: touch .env.local
+- **Add the required environment variables (refer to .env.example for guidance)**: DATABASE_URL=<your-database-url>
+KIND_AUTH_URL=<your-kinde-auth-url>
+API_BASE_URL=<your-hono-api-url>
 
-After deploying, navigate to **Vercel > Project Settings > Environment Variables** and add the necessary environment variables for production.
+## 🗄️ Database Setup
+- **Set up the database**: Ensure Vercel PostgreSQL is configured and running.
+- **Use Drizzle ORM to run migrations**: npm run db:migrate or yarn db:migrate
 
-Replace all occurrences of `localhost` with your Vercel domain URL, as shown below:
+## 🏃 Run the Project
+- **Start the development server**: npm run dev or with Yarn:
 
-```plaintext
-KINDE_SITE_URL=https://job-genius-phi.vercel.app/
-KINDE_POST_LOGOUT_REDIRECT_URL=https://job-genius-phi.vercel.app/
-KINDE_POST_LOGIN_REDIRECT_URL=https://job-genius-phi.vercel.app/dashboard
-NEXT_PUBLIC_APP_URL=https://job-genius-phi.vercel.app/
-```
-
-These variables ensure that the app functions properly on your Vercel deployment.
-
-### 2. Initialize and Deploy
-
-Run the following command to initialize the deployment:
-
-```bash
-vercel
-```
-
-This command will prompt you to configure the project for the first time if it hasn't been linked to Vercel.
-
-Once configured, deploy the project to production using:
-
-```bash
-vercel --prod
-```
-
-This will push your latest changes live on Vercel.
-
-
-Thank you for being part of this journey.
